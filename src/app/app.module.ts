@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { WorkexperienceComponent } from './workexperience/workexperience.component';
-import { CoursesComponent } from './courses/courses.component';
-import { ContactComponent } from './contact/contact.component';
-import { AcademictrainingComponent } from './academictraining/academictraining.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ProgramminglanguagesComponent } from './programminglanguages/programminglanguages.component';
-import { FooterComponent } from './footer/footer.component';
-import { ProfileComponent } from './profile/profile.component';
+import { WorkexperienceComponent } from './cv/workexperience/workexperience.component';
+import { CoursesComponent } from './cv/courses/courses.component';
+import { AcademictrainingComponent } from './cv/academictraining/academictraining.component';
+import { ProjectsComponent } from './cv/projects/projects.component';
+import { ProgramminglanguagesComponent } from './cv/programminglanguages/programminglanguages.component';
+import { ProfileComponent } from './cv/profile/profile.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { ContactComponent } from './cv/contact/contact.component';
 
 
 @NgModule({
@@ -19,15 +20,16 @@ import { ProfileComponent } from './profile/profile.component';
     HeaderComponent,
     WorkexperienceComponent,
     CoursesComponent,
-    ContactComponent,
     AcademictrainingComponent,
     ProjectsComponent,
     ProgramminglanguagesComponent,
     FooterComponent,
     ProfileComponent,
+    ContactComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
